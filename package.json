@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "babel-loader": "^9.1.0",
+    "browserify": "^17.0.0",
+    "browserify-shim": "^3.8.15",
+    "collections": "^5.1.13",
+    "ejs": "^3.1.8",
+    "fs": "^0.0.1-security",
+    "html-webpack-plugin": "^5.5.0",
+    "jquery": "^3.6.0",
+    "jquery-browserify": "^1.8.1",
+    "jsdom": "^20.0.0",
+    "mini-css-extract-plugin": "^2.7.1",
+    "mocha": "^10.0.0",
+    "mocha-logger": "^1.0.8",
+    "node-fetch": "^2.6.1",
+    "path-browserify": "^1.0.1",
+    "rbc-twig-browserify-transform": "^0.0.3",
+    "require-dir-all": "^0.4.15",
+    "sweetalert2": "^11.4.26",
+    "twig": "^1.15.4",
+    "twig-loader": "^0.5.5",
+    "vanilla-router": "^1.2.8"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.0",
+    "flow-bin": "^0.196.3",
+    "flow-webpack-next-plugin": "^0.1.0-rc3",
+    "jstify": "^0.14.0",
+    "mock-local-storage": "^1.1.23",
+    "twigify": "^0.0.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "scripts": {
+    "test": "mocha --require mock-local-storage",
+    "compile": "webpack --config webpack.config.js",
+    "build": "webpack --mode=production --define-process-env-node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --define-process-env-node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  },
+  "version": "1.0.0",
+  "description": "HazielDev semi-closed FrontEnd framework",
+  "name": "Plasma"
+}

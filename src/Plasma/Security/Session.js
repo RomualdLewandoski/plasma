@@ -51,39 +51,6 @@ function clearSession() {
     }
 }
 
-function isSelfOnline() {
-    if (isPersistant()){
-        return localStorage.getItem("online") === null ? false : localStorage.getItem("online")
-    }else{
-        return sessionStorage.getItem("online") === null ? false : sessionStorage.getItem("online")
-    }
-}
-
-function isOnline(){
-    if (isPersistant()){
-        return localStorage.getItem("online") !== null
-    }else{
-        return sessionStorage.getItem("online") !== null
-    }
-}
-
-function switchSelfOnline() {
-    if (isOnline()) {
-        if (isPersistant()){
-            localStorage.removeItem("online")
-        }else{
-            sessionStorage.removeItem("online")
-        }
-        return false
-    } else {
-        if (isPersistant()){
-            localStorage.setItem("online", "true")
-        }else{
-            sessionStorage.setItem("online", "true")
-        }
-        return true
-    }
-}
 
 export default {
     getToken,
@@ -91,9 +58,6 @@ export default {
     setSession,
     isSession,
     clearSession,
-    isSelfOnline,
-    switchSelfOnline,
     setPersistent,
     removePersistent,
-    isOnline
 };
